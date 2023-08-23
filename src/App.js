@@ -6,7 +6,10 @@ import PersonProfile from "./pages/PersonProfile"
 
 export default function App() {
   const [hiredPeople, setHiredPeople] = useState([])
-
+  const updateHiredPeople = (hiredPerson) => {
+    console.log('updateHiredPeople', hiredPerson)
+    setHiredPeople([...hiredPeople, hiredPerson])
+  }
   return (
     <>
       <header>
@@ -20,9 +23,7 @@ export default function App() {
 
       <Routes>
         <Route path='/' element={<Dashboard hiredPeople={hiredPeople} />} />
-
-        <Route path='/view/:id' element={<PersonProfile/>} />
-
+        <Route path='/view/:id' element={<PersonProfile updateHiredPeople={updateHiredPeople}/>} />
       </Routes>
     </>
   )
