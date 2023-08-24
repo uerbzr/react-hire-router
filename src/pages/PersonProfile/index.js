@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import HireForm from "./components/HireForm"
 
 function PersonProfile(props) {
-  console.log('dashboard props:', props)
+  //console.log('dashboard props:', props)
   const [person, setPerson] = useState(null)
   const location = useLocation()
   const navigate = useNavigate()

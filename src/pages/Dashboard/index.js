@@ -10,7 +10,6 @@ function Dashboard(props) {
   async function getPeopleData() {
     const FIELDS_PARAM = 'gender, name, email, id, picture, phone, cell'
     const url = `https://randomuser.me/api/?results=50&inc=${FIELDS_PARAM}`
-
     const response = await fetch(url)
     const json = await response.json()
     // console.log(json.results)

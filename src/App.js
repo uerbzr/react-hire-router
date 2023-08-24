@@ -7,7 +7,7 @@ import PersonProfile from "./pages/PersonProfile"
 export default function App() {
   const [hiredPeople, setHiredPeople] = useState([])
   const updateHiredPeople = (hiredPerson) => {
-    console.log('updateHiredPeople', hiredPerson)
+    //console.log('updateHiredPeople', hiredPerson)
     setHiredPeople([...hiredPeople, hiredPerson])
   }
   return (

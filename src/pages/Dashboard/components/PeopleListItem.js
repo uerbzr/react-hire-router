@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 function PeopleListItem(props) {
   const { person } = props
-  console.log(person)
+  //console.log(person)
   return (
     <li>
 

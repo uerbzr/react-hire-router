@@ -7,11 +7,15 @@ console.log('hire form props', props)
   const person = props.person;
   const navigate = useNavigate()
 
+  if(props.person.wage>0)
+  {
+    setWage(props.person.wage)
+  }
   function handleSubmit(event) {
-    console.log('person', person)
-    event.preventDefault()
+    event.preventDefault()    
     const hiredPerson = { ...person, wage: wage }
-    updateHiredPeople(hiredPerson)
+    props.updateHiredPeople(hiredPerson)
+    console.log('hired', hiredPerson)
     navigate('/') 
   }
 
